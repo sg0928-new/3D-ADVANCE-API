@@ -1,11 +1,11 @@
-# adv3d — 面向工程的高性能 3D 点云 / 建模 / 可视化库
+# adv3d — 面向工程的高性能 3D 点云 / 建模 / 可视化库  并不成熟
 
 **一个硬依赖（numpy），一个可选依赖（Pillow）。没有 OpenGL、没有 Qt、没有 scipy、没有 GPU。**
 点云重建、激光雷达可视化与解析、程序化建模、无头软件渲染、REST 服务，全部用 numpy
 向量化 + 显式分块实现，峰值内存由代码里的预算约束决定，而不是靠运气。
 
 ```
-C:\Users\sg\Desktop\ws\3D-ADVANCE-API
+3D-ADVANCE-API
 ├── adv3d/           库本体（core / io / recon / lidar / modeling / render / datasets / api）
 ├── examples/        4 个可直接运行的示例，各自产出图片与数据文件
 ├── benchmarks/      吞吐与内存基准（README 里的数字全部来自它）
@@ -19,7 +19,7 @@ C:\Users\sg\Desktop\ws\3D-ADVANCE-API
 ## 1. 快速开始
 
 ```powershell
-cd C:\Users\sg\Desktop\ws\3D-ADVANCE-API
+cd 3D-ADVANCE-API
 python -m pip install numpy                # 唯一必需依赖
 python -m pip install pillow               # 只有导出 PNG 时才需要
 ```
@@ -181,7 +181,7 @@ png = c.render(mesh, width=960, height=640, colormap="clay", out_path="a.png")
 
 ---
 
-## 6. 已知限制（不打算隐藏）
+## 6. 已知限制  不完全测试
 
 * **没有布尔 CSG**：装配用 `merge` 并集，零件穿插处不做消隐。
 * **ICP 每次迭代重建邻域查询**：8k×8k、30 次迭代约 6 s；建议先降采样或减少迭代。
