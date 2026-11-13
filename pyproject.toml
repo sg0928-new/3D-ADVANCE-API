@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adv3d"
+version = "1.0.0"
+description = "High-performance, dependency-light 3D point cloud and mesh toolkit for engineering: reconstruction, LiDAR analytics, procedural modelling and a headless renderer"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "sg" }]
+keywords = ["3d", "point-cloud", "lidar", "reconstruction", "tsdf", "mesh", "software-renderer", "numpy"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Visualization",
+  "Topic :: Scientific/Engineering :: GIS",
+]
+# numpy is the only hard requirement: everything else is optional so a
+# barebones industrial machine can run the core with a single wheel
+dependencies = ["numpy>=1.21"]
+
+[project.optional-dependencies]
+# PNG/JPEG export, contact sheets, and the REST /v1/render endpoint
+image = ["pillow>=9.0"]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/shangguanxiaodong/3D-ADVANCE-API"
+Issues = "https://github.com/shangguanxiaodong/3D-ADVANCE-API/issues"
+
+[project.scripts]
+adv3d-serve = "adv3d.api.server:main"
+
+[tool.setuptools]
+packages = [
+  "adv3d",
+  "adv3d.core",
+  "adv3d.io",
+  "adv3d.recon",
+  "adv3d.lidar",
+  "adv3d.modeling",
+  "adv3d.render",
+  "adv3d.datasets",
+  "adv3d.api",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

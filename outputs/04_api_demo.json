@@ -1,0 +1,132 @@
+{
+  "health": {
+    "status": "ok",
+    "version": "1.0.0",
+    "time": 1794593761.894
+  },
+  "summary": {
+    "points": 38862,
+    "bounds": {
+      "min": [
+        -53.8526,
+        -27.7503,
+        -0.0598
+      ],
+      "max": [
+        53.8486,
+        17.9606,
+        12.492
+      ],
+      "size": [
+        107.7012,
+        45.7109,
+        12.5518
+      ]
+    },
+    "spacing_estimate": 0.40451,
+    "has": {
+      "colors": true,
+      "normals": false,
+      "intensity": true
+    },
+    "bytes_per_point": 12,
+    "memory": "455.4 KB"
+  },
+  "downsample": {
+    "points": 14993
+  },
+  "outliers": {
+    "points": 31142,
+    "kept": 0.8013
+  },
+  "analyze": {
+    "points": 38862,
+    "ground": {
+      "method": "grid",
+      "ratio": 0.4157,
+      "points": 16154,
+      "slope_deg": 0.07
+    },
+    "height": {
+      "max": 12.43,
+      "p95": 5.794
+    },
+    "clusters": 29,
+    "range_image": {
+      "rings": 101,
+      "columns": 1029,
+      "coverage": 0.1477258513023314,
+      "points_per_ring_mean": 152.009900990099,
+      "points_per_ring_min": 0,
+      "dead_rings": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    }
+  },
+  "reconstruct": {
+    "vertices": 12728,
+    "faces": 25304,
+    "volume": 0.095
+  }
+}

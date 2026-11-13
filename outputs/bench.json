@@ -1,0 +1,105 @@
+{
+  "python": "3.13.16",
+  "numpy": "2.5.4",
+  "peak_rss_mb": 618.0390625,
+  "rows": [
+    {
+      "group": "points",
+      "name": "voxel_downsample",
+      "unit": "k pts/s",
+      "value": 5883.6,
+      "note": "1,000,000 pts"
+    },
+    {
+      "group": "points",
+      "name": "estimate_normals (PCA)",
+      "unit": "k pts/s",
+      "value": 134.96,
+      "note": "999,513 pts"
+    },
+    {
+      "group": "points",
+      "name": "remove_statistical_outliers",
+      "unit": "k pts/s",
+      "value": 311.01,
+      "note": "999,513 pts, k=16"
+    },
+    {
+      "group": "points",
+      "name": "farthest_point_sample",
+      "unit": "k pts/s",
+      "value": 45.38,
+      "note": "2048 out of 1M"
+    },
+    {
+      "group": "registration",
+      "name": "icp 8k<->8k, 30 it",
+      "unit": "ms",
+      "value": 6164.85,
+      "note": "6-DoF, kd-free"
+    },
+    {
+      "group": "io",
+      "name": "PLY binary write",
+      "unit": "k pts/s",
+      "value": 50352.47,
+      "note": "7.6 MB"
+    },
+    {
+      "group": "io",
+      "name": "PLY binary read",
+      "unit": "k pts/s",
+      "value": 36927.35,
+      "note": "7.6 MB"
+    },
+    {
+      "group": "render",
+      "name": "point render 960x640x2",
+      "unit": "k pts/s",
+      "value": 457.87,
+      "note": "46,124 pts, 1.9 px"
+    },
+    {
+      "group": "render",
+      "name": "mesh render 960x640x2",
+      "unit": "k faces/s",
+      "value": 38.86,
+      "note": "238,852 faces, density 1.5"
+    },
+    {
+      "group": "recon",
+      "name": "tsdf_fuse (splatting)",
+      "unit": "M vox/s",
+      "value": 13.86,
+      "note": "5,994,120 voxels, 296,583 observed"
+    },
+    {
+      "group": "recon",
+      "name": "reconstruct end-to-end",
+      "unit": "k faces/s",
+      "value": 147.36,
+      "note": "475,876 faces in 3229 ms"
+    },
+    {
+      "group": "lidar",
+      "name": "simulate 64-beam scan",
+      "unit": "k rays/s",
+      "value": 390.26,
+      "note": "103,509 returns"
+    },
+    {
+      "group": "lidar",
+      "name": "range image",
+      "unit": "k pts/s",
+      "value": 20126.19,
+      "note": "103,509 pts"
+    },
+    {
+      "group": "lidar",
+      "name": "analyze_scan",
+      "unit": "k pts/s",
+      "value": 1007.17,
+      "note": "ground + clusters + boxes"
+    }
+  ]
+}

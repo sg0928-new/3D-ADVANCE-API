@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.venv/
+
+# generated scratch: tests/benchmarks write these, examples write the numbered ones
+outputs/_*
+*.log
